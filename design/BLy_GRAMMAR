@@ -1,0 +1,141 @@
+Variables
+=========
+
+type    =   {   int, +int, char, +char, string, frac, comp  }
+type1   =   {   int, +int, char, +char, string }
+type2   =   {   frac, comp  }
+
+var     =   {   id  }
+varInit =   {   id = exp    }
+
+V       =   var [or] varInit
+
+
+variable declaration
+====================
+
+type V V V . . .
+
+
+variable initialization
+=======================
+
+varInit varInit varInit . . .
+
+var = var = var = . . . = exp
+
+
+################################################################################
+
+Array
+=====
+
+arryIndex    =   {  arrayID_1DIndex_2DIndex_3DIndex_  . . .   }
+arryStart    =   {  arrayId_1DStart_2DStart_3DStart_  . . .   }
+arryEnd      =   {  arrayId_1DEnd_2DEnd_3DEnd_  . . .         }
+
+series              = linearSeries [or] geometricSeries [or] fibonacciSeries [or] primeSeries
+linearSeries        =   {  a a+d a+2d ... }
+geometricSeries     =   {  a ar ar^2 ...  }
+fibonacciSeries     =   {  0 1 1 2 3 5 7 ... }
+primeSeries         =   {  2 3 5 7 9 11 ...  }
+
+array declaration
+=================
+
+type arryStart to [or] ... arryEnd
+
+type arryStart to [or] ... arryEnd = series
+
+array initialization
+====================
+
+arryStart to [or] ... arryEnd = series
+
+arryIndex = exp
+
+
+################################################################################
+
+conditional
+===========
+
+if condition [or] exp [optional] when stmnt
+    stmnt
+else if condition [or] exp [optional] when stmnt
+    stmnt
+else
+    stmnt
+
+
+################################################################################
+
+Loop
+====
+
+for [optional] type var = exp to [or] ... exp       add [or] sub [or] mul [or] div exp      [optional] when stmnt
+    stmnt
+
+
+for [optional] type var = series [optional] when stmnt
+    stmnt
+
+
+while condition [or] exp [optional] when stmnt
+    stmnt
+
+
+do
+    stmnt
+while condition [or] exp [optional] when stmnt
+
+
+switch var
+    exp
+        stmnt
+    exp
+        stmnt
+    exp
+        stmnt
+    .
+    .
+    .
+
+    
+################################################################################
+
+mew
+===
+
+word = {any word}
+@var = variable pass by reference
+$var = variable pass by value
+
+mew @var[or]$var[or]word    [or]    @var[or]$var[or]word    [or]    @var[or]$var[or]word    . . .
+    stmnt
+    stmnt
+    .
+    .
+    .
+    [optional] = exp
+
+
+################################################################################
+
+block
+=====
+
+block blockID
+    type V V V . . .
+    type V V V . . .
+    .
+    .
+    .
+
+block access
+============
+
+blockID_var = exp
+
+var = blockID_var
+
