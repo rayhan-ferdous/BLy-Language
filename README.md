@@ -13,3 +13,7 @@ mew.
 BLy is your language. The first version of BLy - Tuxedo Cat.
 
 (BLy is not implemented yet by the designer, but plans to develop with new features that are not offered by present programming languages)
+
+
+# Examples
+http://blylanguage.blogspot.com/
